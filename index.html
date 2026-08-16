@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CORTIS-FLIX</title>
+  <title>CORTIS-FLIX - Home</title>
   <style>
     /* Reset base */
     * {
@@ -32,12 +32,12 @@
       z-index: 100;
     }
 
-    .logo {
+    .logo a {
       color: #e50914;
       font-size: 28px;
       font-weight: bold;
       letter-spacing: 1.5px;
-      cursor: pointer;
+      text-decoration: none;
     }
 
     .nav-links {
@@ -46,7 +46,7 @@
       gap: 20px;
     }
 
-    .nav-links button {
+    .nav-links a {
       background: none;
       border: none;
       color: #b3b3b3;
@@ -54,12 +54,13 @@
       font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      cursor: pointer;
-      transition: color 0.2s;
+      text-decoration: none;
+      padding-bottom: 4px;
+      transition: color 0.2s, border-color 0.2s;
     }
 
-    .nav-links button:hover,
-    .nav-links button.active {
+    .nav-links a:hover,
+    .nav-links a.active {
       color: #ffffff;
       border-bottom: 2px solid #e50914;
     }
@@ -82,11 +83,28 @@
       margin-bottom: 40px;
     }
 
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
     .section-title {
       font-size: 18px;
       text-transform: uppercase;
-      margin-bottom: 15px;
       color: #e5e5e5;
+    }
+
+    .see-more {
+      color: #e50914;
+      font-size: 12px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .see-more:hover {
+      text-decoration: underline;
     }
 
     /* Griglia Principale */
@@ -151,11 +169,6 @@
       color: #e50914;
       text-transform: uppercase;
       letter-spacing: 1px;
-    }
-
-    /* Classe per nascondere gli elementi filtrati */
-    .hidden {
-      display: none !important;
     }
 
     /* STILI POP-UP (MODAL) */
@@ -226,58 +239,51 @@
 </head>
 <body>
 
-  <!-- Header con le Categorie -->
+  <!-- Header con Link alle Pagine del Sito -->
   <header class="navbar">
-    <div class="logo" onclick="filterCategory('all')">CORTIS-FLIX</div>
+    <div class="logo"><a href="index.html">CORTIS-FLIX</a></div>
     <nav>
       <ul class="nav-links">
-        <li><button class="active" onclick="filterCategory('all', this)">TUTTI</button></li>
-        <li><button onclick="filterCategory('mv', this)">MV</button></li>
-        <li><button onclick="filterCategory('documentario', this)">DOCUMENTARIO</button></li>
-        <li><button onclick="filterCategory('practice', this)">PRACTICE</button></li>
-        <li><button onclick="filterCategory('dietro-le-quinte', this)">DIETRO LE QUINTE</button></li>
-        <li><button onclick="filterCategory('shows', this)">SHOWS</button></li>
-        <li><button onclick="filterCategory('release-party', this)">RELEASE PARTY</button></li>
+        <li><a href="index.html" class="active">HOME</a></li>
+        <li><a href="mv.html">MV</a></li>
+        <li><a href="documentario.html">DOCUMENTARIO</a></li>
+        <li><a href="practice.html">PRACTICE</a></li>
+        <li><a href="dietro-le-quinte.html">DIETRO LE QUINTE</a></li>
+        <li><a href="shows.html">SHOWS</a></li>
+        <li><a href="release-party.html">RELEASE PARTY</a></li>
       </ul>
     </nav>
     <div class="search-box">
-      <input type="text" placeholder="Cerca video...">
+      <input type="text" id="searchInput" onkeyup="searchCards()" placeholder="Cerca video...">
     </div>
   </header>
 
-  <!-- Contenuto Principale -->
+  <!-- Contenuto Principale (Home Page) -->
   <main class="main-content">
     
+    <!-- Ultimi Caricamenti in Evidenza -->
     <section class="section">
-      <h2 class="section-title" id="current-category-title">Tutti i Contenuti</h2>
+      <div class="section-header">
+        <h2 class="section-title">In Evidenza / Ultimi Arrivi</h2>
+      </div>
       
-      <div class="card-grid">
+      <div class="card-grid" id="cardGrid">
 
-        <!-- SCHEDA 1: VIDEO LOCALE IN POP-UP -->
-        <div class="card" data-category="mv" onclick="openVideoModal('C:/Users/Anita/Videos/Captures/(82) CROCOCO _ Qualcosa mi dà la caccia... un COCCODRILLO nelle FOGNE!_ - TRASH HORROR NIGHT - YouTube e altre 7 pagine - Personale - Microsoft​ Edge 2026-08-01 21-08-50.mp4')">
+        <!-- VIDEO GOOGLE DRIVE -->
+        <div class="card" onclick="openVideoModal('https://drive.google.com/file/d/1g-GFHe458kRj7whZ3QQGZvUkStaTNiFm/preview')">
           <div class="video-container">
-            <img src="C:\Users\Anita\Downloads\CORTIS-FLIX\foto\Screenshot (124).png" alt="Copertina Video" class="card-cover">
-          </div>
-          <div class="card-body">
-            <span class="card-category">MV</span>
-            <div class="card-title">GAY</div>
-          </div>
-        </div>
-
-        <!-- SCHEDA 2: LINK GOOGLE DRIVE O YOUTUBE IN POP-UP -->
-        <div class="card" data-category="mv" onclick="openVideoModal('https://drive.google.com/file/d/1g-GFHe458kRj7whZ3QQGZvUkStaTNiFm/preview')">
-          <div class="video-container">
-            <img src="C:\Users\Anita\Pictures\Screenshots\Screenshot (35).png" alt="Copertina Video" class="card-cover">
+            <img src="foto/screenshot-35.png" alt="Copertina Video" class="card-cover">
           </div>
           <div class="card-body">
             <span class="card-category">MV</span>
             <div class="card-title">FROCIONE</div>
           </div>
         </div>
-<!-- SCHEDA 2: LINK GOOGLE DRIVE O YOUTUBE IN POP-UP -->
-        <div class="card" data-category="documentario" onclick="openVideoModal('https://drive.google.com/file/d/1qVwlRuFf0BCvBT-384eNrdI7ulG2tj5T/view?usp=drive_link')">
+
+        <!-- DOCUMENTARIO GOOGLE DRIVE -->
+        <div class="card" onclick="openVideoModal('https://drive.google.com/file/d/1qVwlRuFf0BCvBT-384eNrdI7ulG2tj5T/preview')">
           <div class="video-container">
-            <img src="C:\Users\Anita\Pictures\Screenshots\Screenshot (35).png" alt="Copertina Video" class="card-cover">
+            <img src="foto/screenshot-35.png" alt="Copertina Video" class="card-cover">
           </div>
           <div class="card-body">
             <span class="card-category">DOCUMENTARIO</span>
@@ -285,9 +291,8 @@
           </div>
         </div>
 
-
-        <!-- SCHEDA 3: ALTRO VIDEO PRACTICE -->
-        <div class="card" data-category="practice" onclick="openVideoModal('video/dance-practice.mp4')">
+        <!-- DANCE PRACTICE -->
+        <div class="card" onclick="openVideoModal('video/dance-practice.mp4')">
           <div class="video-container">
             <img src="https://via.placeholder.com/400x225/111/fff?text=Dance+Practice" alt="Copertina" class="card-cover">
           </div>
@@ -297,8 +302,8 @@
           </div>
         </div>
 
-        <!-- SCHEDA 4: DOCUMENTARIO YOUTUBE EMBED IN POP-UP -->
-        <div class="card" data-category="documentario" onclick="openVideoModal('https://www.youtube.com/embed/GQT6tFK3gPg')">
+        <!-- DOCUMENTARIO YOUTUBE -->
+        <div class="card" onclick="openVideoModal('https://www.youtube.com/embed/GQT6tFK3gPg')">
           <div class="video-container">
             <img src="https://via.placeholder.com/400x225/222/fff?text=Documentario" alt="Copertina" class="card-cover">
           </div>
@@ -318,30 +323,25 @@
     <div class="modal-content">
       <span class="close-btn" onclick="forceCloseModal()">&times;</span>
       <div class="modal-video-container" id="modalPlayerWrapper">
-        <!-- Il player (video o iframe) verrà inserito qui dinamicamente -->
+        <!-- Player inserito dinamicamente -->
       </div>
     </div>
   </div>
 
-  <!-- SCRIPT PER IL FILTRO CATEGORIE E IL POP-UP -->
+  <!-- JAVASCRIPT PER RICERCA E POP-UP -->
   <script>
-    // Filtro Categorie
-    function filterCategory(category, element) {
-      if (element) {
-        const buttons = document.querySelectorAll('.nav-links button');
-        buttons.forEach(btn => btn.classList.remove('active'));
-        element.classList.add('active');
-      }
+    // Ricerca live tra i video della home
+    function searchCards() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.card');
 
-      const sectionTitle = document.getElementById('current-category-title');
-      sectionTitle.innerText = category === 'all' ? 'Tutti i Contenuti' : category.replace('-', ' ');
-
-      const cards = document.querySelectorAll('.card-grid .card');
       cards.forEach(card => {
-        if (category === 'all' || card.getAttribute('data-category') === category) {
-          card.classList.remove('hidden');
+        const title = card.querySelector('.card-title').innerText.toLowerCase();
+        const category = card.querySelector('.card-category').innerText.toLowerCase();
+        if (title.includes(input) || category.includes(input)) {
+          card.style.display = 'flex';
         } else {
-          card.classList.add('hidden');
+          card.style.display = 'none';
         }
       });
     }
@@ -351,7 +351,6 @@
     const playerWrapper = document.getElementById('modalPlayerWrapper');
 
     function openVideoModal(videoSrc) {
-      // Se il link è un video locale (.mp4) usa il tag <video>
       if (videoSrc.toLowerCase().endsWith('.mp4')) {
         playerWrapper.innerHTML = `
           <video id="modalVideoPlayer" controls autoplay>
@@ -359,7 +358,6 @@
             Il browser non supporta la riproduzione.
           </video>`;
       } else {
-        // Altrimenti (YouTube, Google Drive preview, ecc.) usa <iframe>
         playerWrapper.innerHTML = `
           <iframe id="modalVideoPlayer" src="${videoSrc}" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
       }
@@ -368,7 +366,7 @@
 
     function forceCloseModal() {
       modal.classList.remove('active');
-      playerWrapper.innerHTML = ''; // Rimuove il video in modo da fermare l'audio
+      playerWrapper.innerHTML = '';
     }
 
     function closeVideoModal(event) {
