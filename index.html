@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CORTIS-FLIX - Home</title>
   <style>
-    /* Reset base */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -19,7 +18,7 @@
       padding-bottom: 50px;
     }
 
-    /* Header e Navigation Bar */
+    /* Navbar */
     .navbar {
       display: flex;
       align-items: center;
@@ -74,7 +73,7 @@
       outline: none;
     }
 
-    /* Layout Sezioni */
+    /* Layout Content */
     .main-content {
       padding: 30px;
     }
@@ -83,38 +82,20 @@
       margin-bottom: 40px;
     }
 
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-
     .section-title {
       font-size: 18px;
       text-transform: uppercase;
       color: #e5e5e5;
+      margin-bottom: 20px;
     }
 
-    .see-more {
-      color: #e50914;
-      font-size: 12px;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-
-    .see-more:hover {
-      text-decoration: underline;
-    }
-
-    /* Griglia Principale */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 20px;
     }
 
-    /* Scheda Video / Programma */
+    /* Schede Video */
     .card {
       background-color: #1a1a1a;
       border: 2px solid #2a2a2a;
@@ -131,11 +112,10 @@
       border-color: #e50914;
     }
 
-    /* Contenitore per le Copertine */
     .video-container {
       position: relative;
       width: 100%;
-      padding-bottom: 56.25%; /* Rapporto 16:9 */
+      padding-bottom: 56.25%;
       height: 0;
       background-color: #000000;
       overflow: hidden;
@@ -171,7 +151,7 @@
       letter-spacing: 1px;
     }
 
-    /* STILI POP-UP (MODAL) */
+    /* Pop-up Video */
     .modal-overlay {
       position: fixed;
       top: 0;
@@ -235,11 +215,16 @@
     .close-btn:hover {
       color: #e50914;
     }
+
+    .loading-msg {
+      color: #888;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Header con Link alle Pagine del Sito -->
+  <!-- Navbar -->
   <header class="navbar">
     <div class="logo"><a href="index.html">CORTIS-FLIX</a></div>
     <nav>
@@ -254,90 +239,84 @@
       </ul>
     </nav>
     <div class="search-box">
-      <input type="text" id="searchInput" onkeyup="searchCards()" placeholder="Cerca video...">
+      <input type="text" id="searchInput" onkeyup="searchCards()" placeholder="Cerca in Home...">
     </div>
   </header>
 
-  <!-- Contenuto Principale (Home Page) -->
+  <!-- Main Content -->
   <main class="main-content">
-    
-    <!-- Ultimi Caricamenti in Evidenza -->
     <section class="section">
-      <div class="section-header">
-        <h2 class="section-title">In Evidenza / Ultimi Arrivi</h2>
-      </div>
+      <h2 class="section-title">Tutti i Contenuti</h2>
       
-      <div class="card-grid" id="cardGrid">
-
-        <!-- VIDEO GOOGLE DRIVE -->
-        <div class="card" onclick="openVideoModal('https://drive.google.com/file/d/1g-GFHe458kRj7whZ3QQGZvUkStaTNiFm/preview')">
-          <div class="video-container">
-            <img src="foto/screenshot-35.png" alt="Copertina Video" class="card-cover">
-          </div>
-          <div class="card-body">
-            <span class="card-category">MV</span>
-            <div class="card-title">FROCIONE</div>
-          </div>
-        </div>
-
-        <!-- DOCUMENTARIO GOOGLE DRIVE -->
-        <div class="card" onclick="openVideoModal('https://drive.google.com/file/d/1qVwlRuFf0BCvBT-384eNrdI7ulG2tj5T/preview')">
-          <div class="video-container">
-            <img src="foto/screenshot-35.png" alt="Copertina Video" class="card-cover">
-          </div>
-          <div class="card-body">
-            <span class="card-category">DOCUMENTARIO</span>
-            <div class="card-title">RICKY GAY</div>
-          </div>
-        </div>
-
-        <!-- DANCE PRACTICE -->
-        <div class="card" onclick="openVideoModal('video/dance-practice.mp4')">
-          <div class="video-container">
-            <img src="https://via.placeholder.com/400x225/111/fff?text=Dance+Practice" alt="Copertina" class="card-cover">
-          </div>
-          <div class="card-body">
-            <span class="card-category">Practice</span>
-            <div class="card-title">Dance Practice</div>
-          </div>
-        </div>
-
-        <!-- DOCUMENTARIO YOUTUBE -->
-        <div class="card" onclick="openVideoModal('https://www.youtube.com/embed/GQT6tFK3gPg')">
-          <div class="video-container">
-            <img src="https://via.placeholder.com/400x225/222/fff?text=Documentario" alt="Copertina" class="card-cover">
-          </div>
-          <div class="card-body">
-            <span class="card-category">Documentario</span>
-            <div class="card-title">Documentario YouTube</div>
-          </div>
-        </div>
-
+      <!-- La griglia parte vuota e viene riempita da JavaScript leggendo gli altri file -->
+      <div class="card-grid" id="homeCardGrid">
+        <p class="loading-msg">Caricamento contenuti dalle sezioni...</p>
       </div>
     </section>
-
   </main>
 
-  <!-- STRUTTURA DEL POP-UP (MODAL) -->
+  <!-- Modal Pop-Up -->
   <div class="modal-overlay" id="videoModal" onclick="closeVideoModal(event)">
     <div class="modal-content">
       <span class="close-btn" onclick="forceCloseModal()">&times;</span>
-      <div class="modal-video-container" id="modalPlayerWrapper">
-        <!-- Player inserito dinamicamente -->
-      </div>
+      <div class="modal-video-container" id="modalPlayerWrapper"></div>
     </div>
   </div>
 
-  <!-- JAVASCRIPT PER RICERCA E POP-UP -->
   <script>
-    // Ricerca live tra i video della home
+    // Lista delle pagine da cui prendere automaticamente le schede
+    const pagesToFetch = [
+      'mv.html',
+      'documentario.html',
+      'practice.html',
+      'dietro-le-quinte.html',
+      'shows.html',
+      'release-party.html'
+    ];
+
+    const homeGrid = document.getElementById('homeCardGrid');
+
+    // Funzione che scarica ed estrae le schede dagli altri file HTML
+    async function loadAllContent() {
+      homeGrid.innerHTML = ''; // Svuota il messaggio di caricamento
+
+      for (const page of pagesToFetch) {
+        try {
+          const response = await fetch(page);
+          if (!response.ok) continue;
+
+          const htmlText = await response.text();
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(htmlText, 'text/html');
+
+          // Trova tutte le schede .card presenti nella pagina letta
+          const cards = doc.querySelectorAll('.card');
+          cards.forEach(card => {
+            // Clona la scheda e la aggiunge alla Home
+            homeGrid.appendChild(card.cloneNode(true));
+          });
+        } catch (error) {
+          console.log(`Pagina ${page} non ancora creata o non raggiungibile.`);
+        }
+      }
+
+      if (homeGrid.children.length === 0) {
+        homeGrid.innerHTML = '<p class="loading-msg">Nessun contenuto trovato nelle altre sezioni.</p>';
+      }
+    }
+
+    // Esegue il caricamento automatico all'apertura della Home Page
+    loadAllContent();
+
+    // Ricerca live
     function searchCards() {
       const input = document.getElementById('searchInput').value.toLowerCase();
-      const cards = document.querySelectorAll('.card');
+      const cards = homeGrid.querySelectorAll('.card');
 
       cards.forEach(card => {
-        const title = card.querySelector('.card-title').innerText.toLowerCase();
-        const category = card.querySelector('.card-category').innerText.toLowerCase();
+        const title = card.querySelector('.card-title') ? card.querySelector('.card-title').innerText.toLowerCase() : '';
+        const category = card.querySelector('.card-category') ? card.querySelector('.card-category').innerText.toLowerCase() : '';
+        
         if (title.includes(input) || category.includes(input)) {
           card.style.display = 'flex';
         } else {
@@ -346,9 +325,24 @@
       });
     }
 
-    // Gestione Pop-up Video
+    // Gestione Pop-Up Modal
     const modal = document.getElementById('videoModal');
     const playerWrapper = document.getElementById('modalPlayerWrapper');
+
+    // Delegazione eventi per gestire il click sulle schede caricate dinamicamente
+    homeGrid.addEventListener('click', function(event) {
+      const card = event.target.closest('.card');
+      if (card) {
+        const onclickAttr = card.getAttribute('onclick');
+        if (onclickAttr) {
+          // Estrae l'URL inserito dentro openVideoModal('URL')
+          const match = onclickAttr.match(/openVideoModal\(['"]([^'"]+)['"]\)/);
+          if (match && match[1]) {
+            openVideoModal(match[1]);
+          }
+        }
+      }
+    });
 
     function openVideoModal(videoSrc) {
       if (videoSrc.toLowerCase().endsWith('.mp4')) {
