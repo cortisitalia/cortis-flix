@@ -9,7 +9,7 @@ const videoData = [
   },
   {
     id: "2",
-    title: "Super gay in camera da letto scopano nel culios",
+    title: "James sotto la doccia",
     category: "youtube",
     videoSrc: "https://bysebuho.com/e/3aiaf04i095p",
     cover: "https://i.ytimg.com/vi/Vvl_qDDOTo0/hq720.jpg",
@@ -17,10 +17,10 @@ const videoData = [
   },
   {
     id: "3",
-    title: "Live Chiacchiere e Gameplay",
-    category: "live",
-    videoSrc: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    cover: "https://picsum.photos/400/225?random=3",
+    title: "Esercizi per la salute",
+    category: "youtube",
+    videoSrc: "https://bysebuho.com/e/52z17u0q3vxn",
+    cover: "https://i.ytimg.com/vi/eQSWoYavBuA/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBTew0bQA0mju1jO5kqD0kuTVm0rg",
     date: "2026-09-15"
   },
   {
