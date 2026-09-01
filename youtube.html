@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YouTube - CORTIS-FLIX</title>
   <style>
+    /* VARIABILI E RESET */
     :root { --netflix-red: #e50914; --bg-color: #141414; --text-light: #e5e5e5; }
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
     body { background-color: var(--bg-color); color: #fff; overflow-x: hidden; }
-    .card-date { font-size: 11px; color: #bbb; font-style: italic; }
+    .card-date { font-size: 11px; color: #bbb; font-style: italic; margin-top: 2px; }
 
+    /* NAVBAR */
     .navbar { display: flex; align-items: center; justify-content: space-between; padding: 15px 4%; background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%); position: sticky; top: 0; z-index: 100; transition: background 0.3s; }
     .navbar.scrolled { background-color: var(--bg-color); }
     .logo a { color: var(--netflix-red); font-size: 28px; font-weight: 900; text-decoration: none; letter-spacing: 1px; }
@@ -19,9 +21,11 @@
     .nav-links a:hover, .nav-links a.active { color: #fff; font-weight: bold; }
     .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
 
+    /* STILI PAGINA */
     .page-title { margin: 100px 4% 20px 4%; font-size: 2rem; font-weight: bold; color: #fff; text-transform: uppercase; }
     .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; padding: 0 4% 50px 4%; }
 
+    /* CARDS */
     .card { position: relative; cursor: pointer; border-radius: 4px; overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease; background-color: #1f1f1f; }
     .card:hover { transform: scale(1.06); z-index: 10; box-shadow: 0 5px 15px rgba(0,0,0,0.8); border: 1px solid var(--netflix-red); }
     .video-container { width: 100%; padding-bottom: 56.25%; height: 0; position: relative; }
@@ -29,6 +33,7 @@
     .card-info { padding: 10px; }
     .card-title { font-size: 13px; font-weight: bold; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
+    /* MODAL POP-UP */
     .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); display: flex; align-items: center; justify-content: center; z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
     .modal-overlay.active { opacity: 1; pointer-events: auto; }
     .modal-content { position: relative; width: 90%; max-width: 900px; background: #000; border-radius: 8px; box-shadow: 0 0 30px rgba(0,0,0,0.9); border: 1px solid #333; }
@@ -37,6 +42,7 @@
     .close-btn { position: absolute; top: -40px; right: 0; color: #fff; font-size: 35px; cursor: pointer; z-index: 1001; }
     .close-btn:hover { color: var(--netflix-red); }
 
+    /* RESPONSIVE */
     @media (max-width: 768px) {
       .mobile-menu-btn { display: block; }
       .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; background-color: rgba(0,0,0,0.95); width: 100%; padding: 20px; text-align: center; gap: 15px; border-bottom: 2px solid var(--netflix-red); }
@@ -88,7 +94,10 @@
         container.innerHTML = `<p style="color: red;">Errore: database.js non caricato.</p>`; return;
       }
       
-      const videos = videoData.filter(v => v.category === 'youtube');
+      // FILTRO E ORDINAMENTO CRONOLOGICO (Dal più recente al meno recente)
+      const videos = videoData
+        .filter(v => v.category === 'youtube')
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
 
       if (videos.length === 0) {
         container.innerHTML = `<p style="color: #888;">Nessun video YouTube trovato al momento.</p>`; return;
