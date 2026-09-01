@@ -9,7 +9,7 @@
     :root { --netflix-red: #e50914; --bg-color: #141414; --text-light: #e5e5e5; }
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
     body { background-color: var(--bg-color); color: #fff; overflow-x: hidden; }
-    .card-date { font-size: 11px; color: #bbb; font-style: italic; }
+    .card-date { font-size: 11px; color: #bbb; font-style: italic; margin-top: 2px; }
 
     /* NAVBAR */
     .navbar { display: flex; align-items: center; justify-content: space-between; padding: 15px 4%; background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%); position: sticky; top: 0; z-index: 100; transition: background 0.3s; }
@@ -94,17 +94,17 @@
         container.innerHTML = `<p style="color: red;">Errore: database.js non caricato.</p>`; return;
       }
       
-      // FILTRO: Solo Live
-      const videos = videoData.filter(v => v.category === 'live');
+      // FILTRO E ORDINAMENTO CRONOLOGICO (Dal più recente al meno recente)
+      const videos = videoData
+        .filter(v => v.category === 'live')
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
 
       if (videos.length === 0) {
         container.innerHTML = `<p style="color: #888;">Nessuna live trovata al momento.</p>`; return;
       }
 
-      // QUI È DOVE HO CORRETTO: la variabile dateHtml va inserita all'interno del map()
       container.innerHTML = videos.map(video => {
         const dateHtml = video.date ? `<div class="card-date">${video.date}</div>` : '';
-        
         return `
         <div class="card" onclick="openVideoModal('${video.videoSrc}')">
           <div class="video-container">
@@ -112,7 +112,8 @@
           </div>
           <div class="card-info">
             <div class="card-title">${video.title}</div>
-            ${dateHtml} </div>
+            ${dateHtml}
+          </div>
         </div>
         `;
       }).join('');
