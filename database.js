@@ -11,7 +11,7 @@ const videoData = [
     title: "Super gay in camera da letto scopano nel culios",
     category: "youtube",
     videoSrc: "https://bysebuho.com/e/3aiaf04i095p",
-    cover: "https://i.ytimg.com/vi/Vvl_qDDOTo0/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAkyO9k8yFd9MQOrkkXiW3-ZFNidQ",
+    cover: "https://i.ytimg.com/vi/Vvl_qDDOTo0/hq720.jpg",
     date: "23 Agosto 2026"
   },
   {
