@@ -25,10 +25,10 @@ const videoData = [
   },
   {
     id: "4",
-    title: "Video Fuori Categoria",
-    category: "extra",
-    videoSrc: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    cover: "https://picsum.photos/400/225?random=4",
+    title: "Doljabi",
+    category: "youtube",
+    videoSrc: "https://bysebuho.com/e/vwbk952tsfuy",
+    cover: "https://i.ytimg.com/vi/1Ka-HoqHvIU/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLApIK1aplmglvqVWL03aRIn4BF8ag",
     date: "2026-08-10"
   }
 ];
