@@ -1,11 +1,11 @@
 const videoData = [
   {
     id: "1",
-    title: "Documentario Ep. 1",
-    category: "documentario",
-    videoSrc: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    cover: "https://picsum.photos/400/225?random=1",
-    date: "2026-09-01" // Aggiungi la data se vuoi ordinare anche i documentari
+    title: "Info sulla gita scolastica 2026",
+    category: "youtube",
+    videoSrc: "https://bysebuho.com/e/j6rirmq5fkql",
+    cover: "https://i.ytimg.com/vi/jKUZlGcJ-w0/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBTu8zpvO2Yfq1Q6ucVDKMGBVx5Dw",
+    date: "2026-08-18" // Aggiungi la data se vuoi ordinare anche i documentari
   },
   {
     id: "2",
