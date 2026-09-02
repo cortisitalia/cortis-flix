@@ -30,6 +30,14 @@ const videoData = [
     videoSrc: "https://bysebuho.com/e/vwbk952tsfuy",
     cover: "https://i.ytimg.com/vi/1Ka-HoqHvIU/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLApIK1aplmglvqVWL03aRIn4BF8ag",
     date: "2026-08-10"
+  },
+  {
+    id: "5",
+    title: "Guida al lightstick...?",
+    category: "youtube",
+    videoSrc: "https://bysebuho.com/e/bqpq2o3szhvs",
+    cover: "https://i.ytimg.com/vi/DOUUYxE7FeY/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDKhsCDnfjYyhbZMiEVnBDKS-1j3g",
+    date: "2026-08-10"
   }
 ];
 
