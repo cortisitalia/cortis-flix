@@ -102,7 +102,7 @@ const videoData = [
     videoSrc: "https://bysebuho.com/e/u5hz1ntxzycm",
     cover: "https://pbs.twimg.com/media/HQZu0o7aQAAv_l-.jpg",
     date: "2026-08-23"
-  },
+  }
 ];
 
 const categories = {
