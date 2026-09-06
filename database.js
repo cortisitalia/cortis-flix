@@ -87,6 +87,22 @@ const videoData = [
     cover: "https://i.ytimg.com/vi/9d39RqVQNso/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB3eMTZcnHRtb6UrrsyscuBBGW2kw",
     date: "2026-08-29"
   },
+  {
+    id: "12",
+    title: "<PUT YOUR PHONE DOWN> B-DAY PARTY in Seoul Day 1",
+    category: "extra",
+    videoSrc: "https://bysebuho.com/e/yfz5bs3ed6ms",
+    cover: "https://pbs.twimg.com/media/HQUw-TSbAAAe6jD.jpg",
+    date: "2026-08-22"
+  },
+  {
+    id: "12",
+    title: "<PUT YOUR PHONE DOWN> B-DAY PARTY in Seoul Day 2",
+    category: "extra",
+    videoSrc: "https://bysebuho.com/e/u5hz1ntxzycm",
+    cover: "https://pbs.twimg.com/media/HQZu0o7aQAAv_l-.jpg",
+    date: "2026-08-23"
+  },
 ];
 
 const categories = {
