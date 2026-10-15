@@ -102,6 +102,98 @@ const videoData = [
     videoSrc: "https://bysebuho.com/e/u5hz1ntxzycm",
     cover: "https://pbs.twimg.com/media/HQZu0o7aQAAv_l-.jpg",
     date: "2026-08-23"
+  },
+  {
+    id: "14",
+    title: "prima reazione",
+    category: "youtube",
+    videoSrc: "https://bysebuho.com/e/05ex92c9zarw",
+    cover: "https://i.ytimg.com/vi/V8xSTZAvKxg/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAqKolnUoDvfhk_MhvkUhjCITk2ZQ",
+    date: "2026-08-25"
+  },
+  {
+    id: "15",
+    title: "documentario cortis \"cosa vogliamo\" episodio 1",
+    category: "documentario",
+    videoSrc: "https://bysebuho.com/e/6rpohelppfjw",
+    cover: "https://i.ytimg.com/vi/v1d4Rj1pnMY/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDxaP8mTm03Im6ArvGi3IaPdq6hHQ"
+  },
+  {
+    id: "16",
+    title: "Proteggi Pororo",
+    category: "youtube",
+    videoSrc: "https://bysebuho.com/e/9oqvgbdo3q7z",
+    cover: "https://i.ytimg.com/vi/BEkpxcxdZxs/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDcXCXpO48-bptxe-GksRZzFu4jLw",
+    date: "2026-09-07"
+  },
+  {
+    id: "17",
+    title: "documentario cortis \"cosa vogliamo\" episodio 2",
+    category: "documentario",
+    videoSrc: "https://bysebuho.com/e/ojec60hfp8bn",
+    cover: "https://i.ytimg.com/vi/o_WOlIxOZDs/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLADsM9PVeUPwI4ba9tDq9L4wsuzVA"
+  },
+  {
+    id: "18",
+    title: "Si trattava comunque di contenuti brevi.",
+    category: "youtube",
+    videoSrc: "https://bysebuho.com/e/wzsyauczzbcq",
+    cover: "https://i.ytimg.com/vi/W9Tk6AMaJvE/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDKkBzMK0tByTwoy0MrEBktuxmFAQ",
+    date: "2026-09-14"
+  },
+  {
+    id: "19",
+    title: "lollaFAHHHHHHHHlooza",
+    category: "dietro-le-quinte",
+    videoSrc: "https://bysebuho.com/e/3vvo5g1ws5u3",
+    cover: "https://i.ytimg.com/vi/YvwjeHSkMws/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBGMjCTxYiKdpo-8k420ZXpKOs4Dg",
+    date: "2026-09-10"
+  },
+  {
+    id: "20",
+    title: "documentario cortis \"cosa vogliamo\" episodio 3",
+    category: "documentario",
+    videoSrc: "https://bysebuho.com/e/2b0dlhve6crf",
+    cover: "https://i.ytimg.com/vi/VrFDKz2eo0I/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBZGzsndhzTGa7mHlhHs6IayOOakQ"
+  },
+  {
+    id: "21",
+    title: "documentario cortis \"cosa vogliamo\" episodio 4",
+    category: "documentario",
+    videoSrc: "https://bysebuho.com/e/hilja5uz44tm",
+    cover: "https://i.ytimg.com/vi/W3xhrW33qCI/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCmCFTO3ZFyVzikLDv0kVBSM-dXbA"
+  },
+  {
+    id: "22",
+    title: "Il Fagiooooolo",
+    category: "youtube",
+    videoSrc: "https://bysebuho.com/e/p5zj89fvag7h",
+    cover: "https://i.ytimg.com/vi/yPS8y3w_9Ow/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAPwyedJKfZuO6YtJ22yuiiUgjEBw",
+    date: "2026-09-17"
+  },
+  {
+    id: "23",
+    title: "photoshoot per l'album a Los Angeles",
+    category: "dietro-le-quinte",
+    videoSrc: "https://bysebuho.com/d/orlu8skrkaea",
+    cover: "https://i.ytimg.com/vi/r6vn1ZeYC5I/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDP_0zwlB84FqJ4qaNodtKJLsKnpQ",
+    date: "2026-10-02"
+  },
+  {
+    id: "24",
+    title: "martin pov a Busan TMA",
+    category: "dietro-le-quinte",
+    videoSrc: "https://bysebuho.com/d/c0imv1v501di",
+    cover: "https://i.ytimg.com/vi/kaYrFZGjY7g/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDHsnoahhu_2sFbaERz18yfrQy7GQ",
+    date: "2026-10-08"
+  },
+  {
+    id: "25",
+    title: "sto volando, Jack!",
+    category: "youtube",
+    videoSrc: "https://bysebuho.com/d/7ebkcvwxrn08",
+    cover: "https://i.ytimg.com/vi/k6UI2mi1cTY/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCZqzhJ35gzTk5AtQ_ME6Dk4-2MSQ",
+    date: "2026-10-04"
   }
 ];
 
