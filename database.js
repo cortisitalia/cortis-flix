@@ -194,6 +194,30 @@ const videoData = [
     videoSrc: "https://bysebuho.com/d/7ebkcvwxrn08",
     cover: "https://i.ytimg.com/vi/k6UI2mi1cTY/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCZqzhJ35gzTk5AtQ_ME6Dk4-2MSQ",
     date: "2026-10-04"
+  },
+  {
+    id: "26",
+    title: "COER guardami",
+    category: "youtube",
+    videoSrc: "https://byseraguci.com/e/zn9uj9cqw3k9",
+    cover: "https://i.ytimg.com/vi/0S9FK_Zmz50/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCzwFKit-8j8LPIiQx2SM6eBcpZQg",
+    date: "2026-09-21"
+  },
+  {
+    id: "27",
+    title: "martin pov a Barcellona",
+    category: "youtube",
+    videoSrc: "https://byseraguci.com/e/3nav36wxws2u",
+    cover: "https://i.ytimg.com/vi/hhrvUa1wcvU/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCIWuan4IaX3wmRloulxl2y3UM8cg",
+    date: "2026-10-12"
+  },
+  {
+    id: "28",
+    title: "Il figlio di Daejeon",
+    category: "youtube",
+    videoSrc: "https://byseraguci.com/e/e75tlktcj9ie",
+    cover: "https://i.ytimg.com/vi/uhw3nzDvwkA/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCgmUU1v8dmoAOgcR1zyWDc8iy7Fg",
+    date: "2026-09-28"
   }
 ];
 
