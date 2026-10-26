@@ -218,6 +218,22 @@ const videoData = [
     videoSrc: "https://byseraguci.com/e/e75tlktcj9ie",
     cover: "https://i.ytimg.com/vi/uhw3nzDvwkA/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCgmUU1v8dmoAOgcR1zyWDc8iy7Fg",
     date: "2026-09-28"
+  },
+  {
+    id: "29",
+    title: "vlog a staffetta a Los Angeles",
+    category: "youtube",
+    videoSrc: "https://bysebuho.com/e/nqzyjk096nvq",
+    cover: "https://i.ytimg.com/vi/ISkAWt8_aqI/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAvrSDPkiyTEivDYhn5ZJ9uLitNkg",
+    date: "2026-10-16"
+  },
+  {
+    id: "30",
+    title: "samgyeopsal mattutino",
+    category: "youtube",
+    videoSrc: "https://bysebuho.com/e/4eoag1wcvar0",
+    cover: "https://i.ytimg.com/vi/t90kL72BjfY/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB8Ca6x4gVJVH1kvke2TeNV0JixAw",
+    date: "2026-10-20"
   }
 ];
 
