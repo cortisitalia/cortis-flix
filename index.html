@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CORTIS-FLIX - Home</title>
+  <!-- Font "scritto a mano" per i crediti -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
   <style>
     /* VARIABILI E RESET */
     :root {
@@ -54,8 +56,12 @@
     .card-cover { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
     .card-info { padding: 10px; }
     .card-title { font-size: 13px; font-weight: bold; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .card-category { font-size: 10px; color: var(--netflix-red); font-weight: bold; text-transform: uppercase; margin-bottom: 2px; }
-    .card-date { font-size: 11px; color: #bbb; font-style: italic; } /* Stile della data */
+
+    /* Riga categoria (sinistra) + credito traduttore (destra) */
+    .card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 2px; }
+    .card-category { font-size: 10px; color: var(--netflix-red); font-weight: bold; text-transform: uppercase; }
+    .card-credit { font-family: 'Caveat', 'Comic Sans MS', cursive; font-size: 16px; font-weight: 700; color: #f5c518; white-space: nowrap; text-shadow: 1px 1px 0 rgba(0,0,0,0.6); }
+    .card-date { font-size: 11px; color: #bbb; font-style: italic; }
 
     /* MODAL POP-UP VIDEO */
     .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); display: flex; align-items: center; justify-content: center; z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
@@ -74,6 +80,7 @@
       .hero { height: 45vh; }
       .hero-title { font-size: 1.8rem; }
       .card { flex: 0 0 160px; }
+      .card-credit { font-size: 14px; }
     }
   </style>
 </head>
@@ -122,6 +129,7 @@
   </div>
 
   <!-- COLLEGA IL DATABASE DEI VIDEO -->
+  <script src="crediti.js"></script>
   <script src="database.js"></script>
   
   <!-- LOGICA DELLA PAGINA -->
@@ -160,8 +168,9 @@
           rowDiv.className = 'row';
           
           let cardsHTML = catVideos.map(video => {
-            // Se esiste la data nel database, la prepara per stamparla
+            // Data e credito: compaiono solo se presenti nel database
             const dateHtml = video.date ? `<div class="card-date">${video.date}</div>` : '';
+            const creditHtml = video.credit ? `<span class="card-credit">${formatCredit(video.credit)}</span>` : '';
             
             return `
               <div class="card" onclick="openVideoModal('${video.videoSrc}')">
@@ -170,8 +179,11 @@
                 </div>
                 <div class="card-info">
                   <div class="card-title">${video.title}</div>
-                  <div class="card-category">${categories[video.category]}</div>
-                  ${dateHtml} <!-- Ecco la data aggiunta! -->
+                  <div class="card-footer">
+                    <span class="card-category">${categories[video.category]}</span>
+                    ${creditHtml}
+                  </div>
+                  ${dateHtml}
                 </div>
               </div>
             `;
