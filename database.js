@@ -261,6 +261,69 @@ const videoData = [
     cover: "https://i.ytimg.com/vi/t90kL72BjfY/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB8Ca6x4gVJVH1kvke2TeNV0JixAw",
     date: "2026-10-20"
   }
+  {
+    id: "31",
+    title: "Cucinando per il compleanno di James",
+    category: "youtube",
+    credit: "emma1",
+    videoSrc: "https://bysebuho.com/e/mvqmf2vshthm",
+    cover: "https://i.ytimg.com/vi/4XXjTUDtvJs/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAD69LwGn45mBDQVeGZTkCYp2wMgg",
+    date: "2026-10-14"
+  },
+  {
+    id: "32",
+    title: "nuovo divano",
+    category: "youtube",
+    credit: "stella",
+    videoSrc: "https://bysebuho.com/e/spqg1eanusij",
+    cover: "https://i.ytimg.com/vi/XWZ3eOGsvBA/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAY_YP7SSJZtaWCAN24dXx1CzH8YA",
+    date: "2026-10-25"
+  },
+  {
+    id: "33",
+    title: "PYPD tour in Nord America 1",
+    category: "youtube",
+    credit: "stellaemma1",
+    videoSrc: "https://bysebuho.com/d/dp4y8fauxgbg",
+    cover: "https://i.ytimg.com/vi/oaoa1noQzBw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAUnIe2xLvDCAMSnk14WZF65MCWNQ",
+    date: "2026-10-31"
+  },
+  {
+    id: "34",
+    title: "▶︎ Informazioni sulla gita scolastica per il 1° anniversario del 2026 (2)",
+    category: "youtube",
+    credit: "lea",
+    videoSrc: "https://bysebuho.com/d/gu8f6r14y52i",
+    cover: "https://i.ytimg.com/vi/qqRXnNydMj8/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBZvHWCUVrZ5p5XSfQ6vi1_Zyi3Gg",
+    date: "2026-08-21"
+  },
+  {
+    id: "35",
+    title: "Primo anniversario",
+    category: "youtube",
+    credit: "lea",
+    videoSrc: "https://bysebuho.com/d/iky80140ugro",
+    cover: "https://i.ytimg.com/vi/efGuRedKxmM/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAL3yzJqGQn0f9ndyzY5gyKWpuH-g",
+    date: "2026-11-04"
+  },
+  {
+    id: "36",
+    title: "prima del debutto",
+    category: "youtube",
+    credit: "lea",
+    videoSrc: "https://bysebuho.com/d/v551xnx9y6xk",
+    cover: "https://i.ytimg.com/vi/K8z4TvBJP0A/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCP0pQxxJTrF50x_Ow0E07umL9bfQ",
+    date: "2026-08-18"
+  },
+  {
+    id: "37",
+    title: "RECORD DELL’ANNO andiamoooo",
+    category: "youtube",
+    credit: "lea",
+    videoSrc: "https://bysebuho.com/d/xk9hntun867r",
+    cover: "https://i.ytimg.com/vi/4Ke1XVzvmMM/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCpmwJAH6FtIbOkaeDNIxZbydckaA",
+    date: "2026-08-10"
+  }
 ];
 
 const categories = {
