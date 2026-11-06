@@ -260,7 +260,7 @@ const videoData = [
     videoSrc: "https://bysebuho.com/e/4eoag1wcvar0",
     cover: "https://i.ytimg.com/vi/t90kL72BjfY/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB8Ca6x4gVJVH1kvke2TeNV0JixAw",
     date: "2026-10-20"
-  }
+  },
   {
     id: "31",
     title: "Cucinando per il compleanno di James",
