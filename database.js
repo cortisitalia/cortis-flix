@@ -283,7 +283,7 @@ const videoData = [
     id: "33",
     title: "PYPD tour in Nord America 1",
     category: "youtube",
-    credit: "stellaemma1",
+    credit: "stella emma1",
     videoSrc: "https://bysebuho.com/d/dp4y8fauxgbg",
     cover: "https://i.ytimg.com/vi/oaoa1noQzBw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAUnIe2xLvDCAMSnk14WZF65MCWNQ",
     date: "2026-10-31"
